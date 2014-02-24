@@ -1,5 +1,5 @@
 set :application, "donation"
-set :repository,  "git@bitbucket.org:dorren/salespy_frontend.git"
+set :repository,  "git@github.com:dorren/donation-sample-app.git"
 set :stages, %w(qa production)
 set :default_stage, "production"
 require 'capistrano/ext/multistage'
