@@ -1,0 +1,29 @@
+// Place all the styles related to the donations controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.new_donation {
+  a {
+    float: left;
+    margin: 5px 10px;
+    border: 1px solid #777;
+    padding: 10px;
+    font-size: 120%;
+    text-decoration: none;
+    background-color: #EEE;
+  }
+}
+
+.heading {
+  padding-top: 2em;
+  clear: both;
+}
+
+.listing {
+  width: 70%;
+  border: 1px solid #333;
+
+  th {
+    text-align: left;
+  }
+}

@@ -1,0 +1,32 @@
+%h3 New Donation
+
+.new_donation
+  = link_to "Physical Donation", physical_donations_path
+  = link_to "Voucher Donation", voucher_donations_path
+  = link_to "Experience Donation", experience_donations_path
+
+
+%h3.heading Donations
+
+- unless @donations.empty?
+  %table.listing
+    %tr
+      %th ID
+      %th Title
+      %th Type
+      %th Description
+      %th Actions
+    - current_user.donations.all.each do |donation|
+      %tr.donation
+        %td
+          = donation.id
+        %td
+          = donation.detail_type
+        %td
+          = link_to donation.title, donation
+        %td
+          = donation.description
+        %td
+          = link_to "delete", donation, method: :delete
+
+

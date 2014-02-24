@@ -1,0 +1,25 @@
+%h1 Physical Donations
+
+= form_for @donation do |f|
+  = render(partial: "donation_fields", locals: {f: f})
+
+  = f.fields_for :detail, @donation.detail do |f2|
+    .control
+      %label.length Length
+      = f2.text_field :length
+
+    .control
+      %label.width Width
+      = f2.text_field :width
+
+    .control
+      %label.height Height
+      = f2.text_field :height
+
+    .control
+      %label.weight Weight
+      = f2.text_field :weight
+
+  = hidden_field_tag :detail_class, "physical"
+  = submit_tag "Save"
+

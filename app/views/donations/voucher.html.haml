@@ -1,0 +1,15 @@
+%h1 Physical Donations
+
+= form_for @donation do |f|
+  = render(partial: "donation_fields", locals: {f: f})
+
+  = f.fields_for :detail, @donation.detail do |f2|
+    .control
+      %label.expires_at Expire Date
+      = f2.date_select :expires_at
+
+
+  = hidden_field_tag :detail_class, "voucher"
+  = submit_tag "Save"
+
+

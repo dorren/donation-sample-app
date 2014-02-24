@@ -1,0 +1,28 @@
+development:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: donation_dev
+  pool: 5
+  username: root
+  password: 
+
+test:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: donation_test
+  pool: 5
+  username: root
+  password: 
+
+production:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: donation_prod
+  pool: 5
+  username: dba
+  password: my_password
+  host: qa-db.mysalespy.com
+
